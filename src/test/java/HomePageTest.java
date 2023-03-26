@@ -22,13 +22,8 @@ public class HomePageTest {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--remote-allow-origins=*");
         driver = new ChromeDriver(options);
-        //WebDriver driver = new ChromeDriver();
-        //
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(IMPLICITLY_WAIT_SECONDS)); // 0 by default
-        //driver.manage().timeouts().implicitlyWait(IMPLICITLY_WAIT_SECONDS, TimeUnit.SECONDS);
         driver.manage().window().maximize();
-        // presentationSleep(); // For Presentation ONLY
-        //
         driver.get(BASE_URL);
     }
     @After
